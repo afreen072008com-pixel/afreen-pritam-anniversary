@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffe5ef">
+<title>Afreen ♡ Pritam | One Year of Us</title>
+<style>
+:root{--pink:#ff8fb8;--deep:#b94378;--ink:#63364f;--cream:#fff8fb;--lav:#f1eaff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);font-family:"Trebuchet MS",system-ui,sans-serif;background:linear-gradient(180deg,#fff0f6,#fff9fc 48%,#f5efff);overflow-x:hidden}
+button{font:inherit}.floaties{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.floaty{position:absolute;bottom:-45px;opacity:.65;animation:rise linear forwards}
+@keyframes rise{to{transform:translateY(-115vh) rotate(28deg);opacity:0}}
+.wrap{position:relative;z-index:1;max-width:850px;margin:auto;padding:18px 14px 45px}
+.opening{position:fixed;inset:0;z-index:10;background:radial-gradient(circle at 50% 40%,#fff 0,#ffe5ef 42%,#efdfff 100%);display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;transition:opacity .8s,visibility .8s}
+.opening.hide{opacity:0;visibility:hidden;pointer-events:none}
+.opening-inner{max-width:500px}.glow-heart{font-size:clamp(5rem,24vw,9rem);color:#e86da1;text-shadow:0 0 15px #ffacd0,0 0 45px #f58cba;animation:heartPulse 1.4s infinite}
+@keyframes heartPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.13)}}
+.opening h1{font:normal clamp(2.5rem,9vw,4.2rem)/1.05 Georgia,serif;color:#bd4d80;margin:12px 0}
+.opening p{line-height:1.7}.pill{display:inline-block;background:#fff;border:1px solid #ffd2e3;border-radius:999px;padding:8px 14px;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--deep)}
+.hero{min-height:85vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:34px 10px}
+.hero h1{font:normal clamp(2.8rem,10vw,5.7rem)/1.02 Georgia,serif;margin:22px 0 12px;color:#bd4d80}.hero h1 span{display:block;color:#e78db1;font-style:italic}
+.subtitle{font-size:1.05rem;max-width:510px;line-height:1.7;margin:8px auto 22px}.heart{font-size:3rem;animation:heartPulse 1.4s infinite}
+.btn{border:0;border-radius:999px;background:linear-gradient(135deg,#ff9fc3,#e97eaa);color:white;padding:13px 20px;font-weight:700;box-shadow:0 8px 18px #db68943d;cursor:pointer;margin:5px;transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}.btn.alt{background:white;color:var(--deep);border:1px solid #ffd1e2;box-shadow:none}
+section{margin:22px 0;padding:26px 18px;border:1px solid #ffe0ec;border-radius:26px;background:#ffffffd9;box-shadow:0 12px 35px #b95b8410;backdrop-filter:blur(6px)}
+h2{font:normal clamp(1.8rem,6vw,2.5rem) Georgia,serif;text-align:center;color:#bd4d80;margin:4px 0 12px}
+.small{text-align:center;line-height:1.7;margin:0 auto 18px;max-width:600px}
+.envelope-area{text-align:center;padding:8px 0}.envelope{font-size:5.6rem;display:inline-block;cursor:pointer;filter:drop-shadow(0 8px 8px #e98cb333);animation:floatEnvelope 2.8s ease-in-out infinite}
+@keyframes floatEnvelope{50%{transform:translateY(-8px) rotate(3deg)}}
+.letter{display:none;text-align:left;background:#fff8fc;border:1px dashed #f2a4c3;border-radius:18px;padding:20px;line-height:1.85;margin:15px auto 0;max-width:620px;white-space:pre-line}
+.letter.show{display:block;animation:letterOpen .7s ease}@keyframes letterOpen{from{opacity:0;transform:translateY(15px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
+.memories{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.memory{min-height:155px;border:2px dashed #f5b4ce;border-radius:18px;background:linear-gradient(145deg,#fff0f6,#f4efff);display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:10px;overflow:hidden}
+.memory img{width:100%;height:190px;object-fit:cover;border-radius:12px;display:none}.memory label{font-size:.85rem;margin-top:8px;color:#9c5477;cursor:pointer}.memory input{max-width:100%;font-size:.72rem;margin-top:8px}.memory .caption{font-size:.8rem;margin-top:6px}
+.countdown{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:18px 0}.timebox{background:#fff0f6;border:1px solid #ffd5e5;border-radius:16px;padding:14px 10px;min-width:74px;text-align:center}.timebox strong{display:block;font-size:1.6rem;color:#c14d80}.timebox span{font-size:.72rem;text-transform:uppercase;letter-spacing:.06em}
+.surprise{display:none;margin:18px auto 0;max-width:600px;background:#fff2f8;border-radius:18px;padding:20px;text-align:center;line-height:1.8;border:1px solid #ffd4e5}.surprise.show{display:block;animation:letterOpen .5s ease}
+.gift-wrap{text-align:center;padding:12px}.gift{font-size:6rem;display:inline-block;cursor:pointer;filter:drop-shadow(0 7px 8px #d85d9333);animation:giftWiggle 2s infinite}.gift.opened{animation:giftPop .65s ease forwards}
+@keyframes giftWiggle{0%,80%,100%{transform:rotate(0)}85%{transform:rotate(-8deg)}90%{transform:rotate(8deg)}95%{transform:rotate(-5deg)}}
+@keyframes giftPop{50%{transform:scale(1.35) rotate(8deg)}100%{transform:scale(1)}}
+.teddies{font-size:clamp(2.5rem,10vw,4rem);text-align:center;letter-spacing:.12em;margin:8px 0 16px}
+.forever-result{display:none;text-align:center;padding:15px;border-radius:18px;background:#fff0f7;margin-top:14px;line-height:1.8}.forever-result.show{display:block;animation:letterOpen .5s ease}
+.musicbox{text-align:center}.musicbox input{display:block;margin:12px auto;max-width:100%;font-size:.85rem}audio{width:100%;max-width:400px;margin-top:8px}
+footer{text-align:center;padding:22px 8px 5px;line-height:1.8;color:#a35b7b}.tiny{font-size:.8rem;opacity:.8}
+@media(max-width:480px){.wrap{padding:10px 11px 30px}.hero{min-height:80vh}.memories{grid-template-columns:1fr}.memory img{height:240px}section{padding:22px 14px}.timebox{min-width:66px}}
+</style>
+
+<style>
+/* Extra anniversary interactions */
+.timeline{display:grid;gap:12px;max-width:650px;margin:18px auto}
+.timeline-item{display:grid;grid-template-columns:42px 1fr;gap:10px;align-items:start}
+.timeline-icon{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:#ffe5ef;font-size:1.2rem}
+.timeline-card{padding:13px 15px;border:1px solid #ffd8e7;border-radius:16px;background:#fff8fc;line-height:1.6}
+.timeline-card input,.timeline-card textarea{width:100%;border:1px solid #f3bfd3;border-radius:10px;padding:9px;margin-top:6px;font:inherit;background:white;color:#63364f}
+.reason-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.reason{border:1px solid #ffd4e5;background:linear-gradient(145deg,#fff4f8,#f5efff);border-radius:16px;padding:15px 10px;text-align:center;cursor:pointer;color:#9e4770;min-height:78px}
+.reason .hidden-reason{display:none;margin-top:8px;line-height:1.5;font-size:.9rem}
+.reason.revealed .hidden-reason{display:block;animation:letterOpen .35s ease}
+.quiz-choice{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:12px 0}
+.quiz-result{display:none;margin:15px auto 0;padding:16px;border-radius:16px;background:#fff0f7;text-align:center;line-height:1.7}
+.quiz-result.show{display:block}
+.scratch-card{max-width:500px;margin:12px auto;padding:22px 12px;text-align:center;border-radius:18px;border:2px dashed #f1a3c4;background:linear-gradient(135deg,#fff0f6,#f3edff);cursor:pointer;line-height:1.8}
+.scratch-card .scratch-secret{display:none;font-size:1.1rem;font-weight:700;color:#bd4d80}
+.scratch-card.revealed .scratch-secret{display:block;animation:letterOpen .4s ease}
+.scratch-card.revealed .scratch-hint{display:none}
+#love-meter{width:100%;accent-color:#e97eaa;margin:12px 0}
+@media(max-width:480px){.reason-grid{grid-template-columns:1fr 1fr}}
+</style>
+
+
+<style>
+/* ULTIMATE anniversary additions — soft scrapbook / dreamy cinema */
+:root{--rose-paper:#fff8f7;--lavender-paper:#f4f0ff;--tape:#ffe4a8;--night:#10142e}
+.feature-kiss .kiss-stage{min-height:145px;display:flex;align-items:center;justify-content:center;gap:clamp(12px,5vw,42px);position:relative;overflow:hidden;border-radius:22px;background:linear-gradient(135deg,#fff0f6,#f4efff);padding:20px 8px}
+.kiss-person{font-size:clamp(2.3rem,10vw,4.3rem);filter:drop-shadow(0 5px 9px #cf74a255)}
+.kiss-heart{font-size:clamp(1.6rem,7vw,2.8rem);animation:heartPulse 1.2s infinite}
+.flying-kiss{position:absolute;left:16%;top:48%;font-size:2.6rem;z-index:2;pointer-events:none;animation:kissFlight 1.7s cubic-bezier(.2,.75,.25,1) forwards;filter:drop-shadow(0 5px 10px #da5c9a66)}
+@keyframes kissFlight{0%{opacity:0;transform:translate(0,18px) scale(.35) rotate(-18deg)}18%{opacity:1}75%{opacity:1;transform:translate(50vw,-25px) scale(1.35) rotate(12deg)}100%{opacity:0;transform:translate(62vw,-42px) scale(.75)}}
+.kiss-message{min-height:28px;text-align:center;color:#bc4c80;font-weight:700;margin:12px 0 0}
+#star-section{background:radial-gradient(ellipse at 50% 0%,#292e60 0%,#171b3c 47%,#0c1028 100%);border-color:#56527f;color:#fff;overflow:hidden}
+#star-section h2{color:#fff0fa}#star-section .small{color:#e8dff8}
+#star-canvas{display:block;width:100%;height:clamp(205px,58vw,330px);border-radius:18px;background:transparent}
+.star-caption{text-align:center;color:#e8dff8;font-size:.88rem;line-height:1.65;margin:4px auto 0;max-width:540px}
+.slide-shell{position:relative;overflow:hidden;border-radius:22px;min-height:230px;aspect-ratio:16/9;background:linear-gradient(135deg,#34264c,#ab648b 55%,#f3b4c9);box-shadow:0 14px 32px #6e416524}
+.slide-shell:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#160d29c9 0%,transparent 68%);pointer-events:none}
+#slideshow-image{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;display:none;opacity:0;transition:opacity .65s ease;filter:saturate(.88)}
+#slideshow-image.visible{display:block;opacity:1}
+.slide-placeholder{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:20px;color:#fff;font:italic clamp(1.4rem,5vw,2.4rem) Georgia,serif;line-height:1.4;text-shadow:0 3px 18px #1b0d31}
+.slide-caption{position:absolute;z-index:2;bottom:18px;left:16px;right:16px;color:white;text-align:center;font:normal clamp(1.1rem,4vw,1.8rem) Georgia,serif;text-shadow:0 2px 8px #1d1028}
+.slide-controls{display:flex;justify-content:center;align-items:center;gap:8px;flex-wrap:wrap;margin:13px 0 5px}
+.slide-count{min-width:72px;text-align:center;color:#9e5077;font-size:.88rem}
+#slideshow-files{display:block;max-width:100%;margin:13px auto 5px;font-size:.83rem}
+#slide-status{min-height:20px;text-align:center}
+.secret-overlay,.final-overlay{position:fixed;inset:0;z-index:30;display:none;align-items:center;justify-content:center;padding:18px;background:#171329eF;backdrop-filter:blur(10px)}
+.secret-overlay.show,.final-overlay.show{display:flex;animation:letterOpen .35s ease}
+.secret-panel{width:min(100%,440px);border-radius:26px;padding:25px 20px;text-align:center;background:linear-gradient(145deg,#fff9fc,#f0eaff);border:1px solid #fff;box-shadow:0 22px 70px #08071880;color:#63364f}
+.secret-lock{font-size:3.5rem}.secret-panel h2{margin-top:4px}.secret-panel input{width:min(100%,220px);padding:13px;border:1px solid #efb2cb;border-radius:12px;text-align:center;letter-spacing:.35em;font-size:1.2rem;background:white;color:#63364f}
+.secret-hint{font-size:.84rem;line-height:1.6;color:#95627e}.secret-error{min-height:23px;color:#b33b66;font-size:.85rem}
+.secret-reveal{display:none;margin:12px 0 0;padding:14px;border-radius:16px;background:#fff0f7;line-height:1.75}.secret-reveal.show{display:block;animation:letterOpen .4s ease}
+#scrapbook-section{background:linear-gradient(145deg,#fffdfb,#fff4f8 55%,#f6f1ff)}
+.scrapbook-form{border:1px dashed #eaa2bf;border-radius:20px;padding:15px;background:#ffffffb8}
+.scrap-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.scrap-field{display:flex;flex-direction:column;gap:5px;text-align:left;font-size:.83rem;color:#87506c}
+.scrap-field.full{grid-column:1/-1}
+.scrap-field input,.scrap-field textarea,.scrap-field select{width:100%;border:1px solid #f0bfd1;border-radius:11px;padding:10px;background:#fff;color:#63364f;font:inherit;min-width:0}
+.scrap-field textarea{min-height:76px;resize:vertical}
+.scrap-actions{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+.scrap-preview{display:none;margin:12px auto 0;max-width:330px;padding:10px 10px 18px;background:#fff;box-shadow:0 6px 18px #79516d20;transform:rotate(-1deg)}
+.scrap-preview img{width:100%;max-height:210px;object-fit:cover;display:block}
+.scrap-preview.visible{display:block}
+.scrap-count{text-align:center;color:#9d5c7b;font-size:.84rem;margin:13px 0}
+.scrap-pages{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;margin-top:16px;align-items:start}
+.scrap-page{position:relative;padding:12px 12px 16px;background:#fffdf8;border:1px solid #f5d9d4;border-radius:5px;box-shadow:0 7px 18px #835e7220;transform:rotate(var(--tilt,1deg));overflow:hidden}
+.scrap-page:nth-child(even){--tilt:-1.2deg;background:#fffaff;border-color:#e5d8f8}
+.scrap-page:before{content:"";position:absolute;top:-2px;left:38%;width:68px;height:18px;background:#ffe4a8b8;transform:rotate(-4deg);z-index:2}
+.scrap-photo{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:3px;background:#f9edf3;display:block}
+.scrap-no-photo{width:100%;aspect-ratio:4/3;display:grid;place-items:center;background:linear-gradient(135deg,#fff0f6,#f0ebff);font-size:2.5rem}
+.scrap-sticker{position:absolute;top:21px;right:18px;font-size:1.7rem;filter:drop-shadow(0 2px 2px #6544)}
+.scrap-page h3{font:normal 1.18rem Georgia,serif;color:#b54f7c;margin:13px 0 5px;overflow-wrap:anywhere}
+.scrap-date{font-size:.74rem;color:#a17b91;letter-spacing:.04em}
+.scrap-note{font-size:.88rem;line-height:1.55;white-space:pre-wrap;overflow-wrap:anywhere;color:#6f5063;margin:8px 0}
+.scrap-remove{border:0;border-radius:999px;background:#fff0f6;color:#a34970;padding:7px 10px;font-size:.75rem;cursor:pointer}
+.scrap-empty{text-align:center;padding:24px 12px;border:1px dashed #edc2d4;border-radius:17px;color:#a26984;background:#fff8fc;grid-column:1/-1}
+.scrap-tools{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:12px}
+.scrap-note-small{font-size:.77rem;line-height:1.55;color:#9c7187;text-align:center;margin:12px auto 0;max-width:650px}
+.final-teaser{text-align:center;background:linear-gradient(135deg,#fff1f7,#f0eaff);border:1px solid #f7d4e3;border-radius:22px;padding:24px 12px}
+.final-teaser .infinity{font-size:2.7rem;color:#d66c9b;animation:heartPulse 2s infinite}
+.final-overlay{z-index:40;background:radial-gradient(circle at 50% 38%,#4a315c 0%,#1c1838 48%,#090d22 100%);overflow:auto}
+.final-content{position:relative;width:min(100%,680px);min-height:min(90vh,700px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#fff;padding:30px 15px}
+.final-sparkles{font-size:1.4rem;letter-spacing:.8em;color:#ffe8f3;animation:twinkle 1.5s infinite alternate}
+@keyframes twinkle{from{opacity:.45;text-shadow:0 0 4px #fff}to{opacity:1;text-shadow:0 0 17px #ffc0df}}
+.final-content h2{font-size:clamp(2.8rem,11vw,5.7rem);color:#fff0f7;margin:18px 0;font-style:italic;text-shadow:0 0 25px #f7a6cc66}
+.final-names{font:normal clamp(1.2rem,5vw,2rem) Georgia,serif;letter-spacing:.05em;color:#f7c6dd}
+.final-content p{line-height:1.8;max-width:460px;color:#eee3f7}
+.final-close{position:absolute;top:8px;right:8px}
+@media(max-width:540px){.scrap-pages{grid-template-columns:1fr 1fr;gap:10px}.scrap-page{padding:9px 9px 13px}.scrap-page h3{font-size:1rem}.scrap-note{font-size:.8rem}.scrap-sticker{font-size:1.45rem;top:18px;right:14px}.slide-shell{aspect-ratio:4/3;min-height:205px}.secret-panel{padding:22px 14px}}
+@media(max-width:360px){.scrap-grid{grid-template-columns:1fr}.scrap-field.full{grid-column:auto}.scrap-pages{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.flying-kiss,.final-sparkles{animation:none!important}#slideshow-image{transition:none}}
+</style>
+
+</head>
+<body>
+<div class="opening" id="opening">
+  <div class="opening-inner">
+    <div class="glow-heart">♡</div>
+    <div class="pill">a little surprise for you</div>
+    <h1>For my Pritam</h1>
+    <p>One year of us, a million little feelings, and so many memories still waiting to happen. 💗</p>
+    <button class="btn" onclick="enterSite()">Open our little world ✨</button>
+  </div>
+</div>
+<div class="floaties" id="floaties"></div>
+<main class="wrap">
+<header class="hero">
+  <div class="pill">made with all my love</div><div class="heart">♡</div>
+  <h1>One Year of <span>Us</span></h1>
+  <p class="subtitle">Happy 1st Anniversary, <strong>Pritam</strong> 💗<br>From <strong>Afreen</strong>, with all my heart.</p>
+  <p>12 November 2025 — our story began ✨</p>
+  <button class="btn" onclick="document.getElementById('letter-section').scrollIntoView({behavior:'smooth'})">Open your little surprise ↓</button>
+</header>
+<section id="letter-section">
+  <h2>A letter from my heart 💌</h2><p class="small">Tap the envelope to open a little letter made just for you.</p>
+  <div class="envelope-area"><div class="envelope" role="button" tabindex="0" aria-label="Open love letter" onclick="toggleLetter()" onkeydown="if(event.key==='Enter'||event.key===' '){toggleLetter()}">💌</div><div class="tiny">tap the envelope</div>
+  <div class="letter" id="letter">My dearest Pritam, 💗
+
+Happy one year to us! On 12 November 2025, a beautiful chapter of my life began. Since then, every little moment has become part of a story I want to keep close to my heart.
+
+Thank you for being someone special to me, for the smiles, the memories, and all the little things that make our story ours. If I could choose again, I would still want to make these memories with you.
+
+This is only our first year, not the end of our story. I hope we keep learning, laughing, growing, and choosing each other through all the days ahead.
+
+With all my love,
+Afreen ♡</div></div>
+</section>
+<section>
+  <h2>Our little memory garden 🌷</h2><p class="small">Choose your favourite photos from your phone to add them to this preview.</p>
+  <div class="memories">
+    <div class="memory"><div class="placeholder">📷</div><div class="caption">Our favourite memory</div><input aria-label="Choose first photo" type="file" accept="image/*" onchange="loadPhoto(event,0)"><img alt="Our favourite memory"></div>
+    <div class="memory"><div class="placeholder">🌸</div><div class="caption">A moment I'll keep</div><input aria-label="Choose second photo" type="file" accept="image/*" onchange="loadPhoto(event,1)"><img alt="A moment I'll keep"></div>
+    <div class="memory"><div class="placeholder">✨</div><div class="caption">You + me</div><input aria-label="Choose third photo" type="file" accept="image/*" onchange="loadPhoto(event,2)"><img alt="You and me"></div>
+    <div class="memory"><div class="placeholder">💞</div><div class="caption">More memories to come</div><input aria-label="Choose fourth photo" type="file" accept="image/*" onchange="loadPhoto(event,3)"><img alt="More memories to come"></div>
+  </div>
+</section>
+<section>
+  <h2>One year, a thousand feelings 🗓️</h2><p class="small">Our first anniversary is on <strong>12 November 2026</strong>. Every day with you is another page in our story.</p>
+  <div class="countdown" id="countdown" aria-live="polite"></div><p class="small" id="countdown-note"></p>
+</section>
+<section>
+  <h2>A little gift for you 🎁</h2><p class="small">Tap the gift. There's a tiny reminder inside.</p>
+  <div class="gift-wrap"><div class="gift" role="button" tabindex="0" aria-label="Open gift" onclick="openGift()" onkeydown="if(event.key==='Enter'||event.key===' '){openGift()}">🎁</div><div class="tiny">tap to unwrap</div>
+  <div class="surprise" id="surprise">If I could wrap up my favourite moments, I would put them all in a little box and label it <strong>“Us”</strong>. 💝<br><br>Thank you for being part of my story, Pritam. Here's to more laughter, more memories, more hugs, and many more chapters together.<br><br><strong>Happy 1st Anniversary! Forever your Afreen ♡</strong></div></div>
+</section>
+<section>
+  <h2>Will you stay with me? 🧸</h2><div class="teddies">🧸 💗 🧸</div>
+  <p class="small">Pritam, there's one little question from Afreen…</p>
+  <h2 style="font-size:clamp(1.5rem,5vw,2.1rem)">Will you stay with me for all the chapters ahead? ♡</h2>
+  <div style="text-align:center"><button class="btn" onclick="foreverYes()">Yes, my love! 💞</button><button class="btn alt" onclick="foreverMaybe()">Can I have a hug first? 🥹</button></div>
+  <div class="forever-result" id="forever-result"></div>
+</section>
+
+<section>
+  <h2>Our story, chapter by chapter 📖</h2>
+  <p class="small">A tiny timeline of your relationship. You can edit the prompts with your real memories before sharing the site.</p>
+  <div class="timeline">
+    <div class="timeline-item"><div class="timeline-icon">🌷</div><div class="timeline-card"><strong>When our story began</strong><input aria-label="Our beginning memory" placeholder="Write where/how it all began…"></div></div>
+    <div class="timeline-item"><div class="timeline-icon">😊</div><div class="timeline-card"><strong>A moment that made me smile</strong><input aria-label="A happy memory" placeholder="Add a favourite moment…"></div></div>
+    <div class="timeline-item"><div class="timeline-icon">🫶</div><div class="timeline-card"><strong>Something I'll always remember</strong><input aria-label="A memorable moment" placeholder="Write a memory you treasure…"></div></div>
+    <div class="timeline-item"><div class="timeline-icon">✨</div><div class="timeline-card"><strong>Our next chapter</strong><input aria-label="Our next chapter" placeholder="Something you want to do together…"></div></div>
+  </div>
+  <p class="tiny small">These are editable prompts in the preview; for a permanent online version, put your final text into the website file.</p>
+</section>
+
+<section>
+  <h2>Reasons I adore you 💗</h2>
+  <p class="small">Tap each little heart to reveal a reason.</p>
+  <div class="reason-grid">
+    <button class="reason" onclick="this.classList.toggle('revealed')">♡ Reason 1 <span class="hidden-reason">Your smile can make an ordinary day feel special. 😊</span></button>
+    <button class="reason" onclick="this.classList.toggle('revealed')">♡ Reason 2 <span class="hidden-reason">You have a place in my heart that is yours alone. 💞</span></button>
+    <button class="reason" onclick="this.classList.toggle('revealed')">♡ Reason 3 <span class="hidden-reason">I love the little memories we keep making. 📸</span></button>
+    <button class="reason" onclick="this.classList.toggle('revealed')">♡ Reason 4 <span class="hidden-reason">I look forward to all the chapters still ahead of us. 🌙</span></button>
+    <button class="reason" onclick="this.classList.toggle('revealed')">♡ Reason 5 <span class="hidden-reason">You make our story uniquely ours. 🧸</span></button>
+    <button class="reason" onclick="this.classList.toggle('revealed')">♡ Reason 6 <span class="hidden-reason">Because it's you, Pritam. Simply you. 💗</span></button>
+  </div>
+</section>
+
+<section>
+  <h2>How well do you know us? 💘</h2>
+  <p class="small">A tiny, just-for-fun anniversary quiz for Pritam.</p>
+  <p style="text-align:center"><strong>When did our story begin?</strong></p>
+  <div class="quiz-choice">
+    <button class="btn alt" onclick="quizAnswer(false)">12 October 2025</button>
+    <button class="btn" onclick="quizAnswer(true)">12 November 2025</button>
+    <button class="btn alt" onclick="quizAnswer(false)">12 December 2025</button>
+  </div>
+  <div id="quiz-result" class="quiz-result"></div>
+</section>
+
+<section>
+  <h2>A little secret note 💌</h2>
+  <p class="small">Tap the card to reveal a tiny promise from Afreen.</p>
+  <div class="scratch-card" role="button" tabindex="0" onclick="this.classList.toggle('revealed')" onkeydown="if(event.key==='Enter'||event.key===' '){this.classList.toggle('revealed')}">
+    <div class="scratch-hint">✨ Tap to reveal your secret message ✨<br><span style="font-size:2rem">🎀</span></div>
+    <div class="scratch-secret">My favourite place is wherever I get to share a happy moment with you. ♡<br><br>— Afreen, always cheering for us 💗</div>
+  </div>
+</section>
+
+<section>
+  <h2>Send me a virtual hug 🫂</h2>
+  <p class="small">Pritam, choose how big a hug you're sending Afreen today.</p>
+  <label for="love-meter" style="display:block;text-align:center">Hug strength: <strong id="hug-value">100%</strong></label>
+  <input id="love-meter" type="range" min="10" max="100" value="100" oninput="document.getElementById('hug-value').textContent=this.value+'%'">
+  <div style="text-align:center"><button class="btn" onclick="sendHug()">Send hug 💗</button></div>
+  <div class="quiz-result" id="hug-result"></div>
+</section>
+
+<section class="musicbox">
+  <h2>Our song 🎶</h2><p class="small">Choose an audio file saved on your phone, then press play.</p>
+  <input type="file" accept="audio/*" id="music-file" aria-label="Choose music file"><audio id="audio" controls loop hidden></audio>
+  <p class="tiny">The song you choose is a local preview. Add the audio file separately if you want it included when publishing.</p>
+</section>
+
+<section class="feature-kiss">
+  <h2>A kiss, sent with love 💋</h2>
+  <p class="small">A little flying kiss from Afreen to Pritam. Tap the button and watch it travel. ♡</p>
+  <div class="kiss-stage" id="kiss-stage"><span class="kiss-person" aria-hidden="true">👩🏻</span><span class="kiss-heart" aria-hidden="true">💗</span><span class="kiss-person" aria-hidden="true">👨🏻</span></div>
+  <div style="text-align:center"><button class="btn" onclick="sendVirtualKiss()">Send a virtual kiss 💋</button></div>
+  <div class="kiss-message" id="kiss-message" aria-live="polite">A kiss is on its way…</div>
+</section>
+
+<section id="star-section">
+  <h2>Our names, written in the stars ✨</h2>
+  <p class="small">Somewhere in every little universe, it will always be Afreen ♡ Pritam.</p>
+  <canvas id="star-canvas" aria-label="A night sky with Afreen and Pritam written in sparkling stars"></canvas>
+  <p class="star-caption">12 November 2025 · Two hearts, one little universe. <br>Make a wish together. 🌙</p>
+</section>
+
+<section>
+  <h2>Our love, like a little movie 🎞️</h2>
+  <p class="small">Add a few favourite photos from your phone and let them play like a tiny cinematic memory film.</p>
+  <div class="slide-shell" id="slide-shell">
+    <div class="slide-placeholder" id="slide-placeholder">Every love story has a favourite scene…<br>ours is still being written. ♡</div>
+    <img id="slideshow-image" alt="A memory from Afreen and Pritam's photo slideshow">
+    <div class="slide-caption" id="slide-caption">Afreen ♡ Pritam — our story</div>
+  </div>
+  <div class="slide-controls">
+    <button class="btn alt" onclick="changeSlide(-1)" aria-label="Previous slide">‹ Previous</button>
+    <span class="slide-count" id="slide-count">1 / 1</span>
+    <button class="btn alt" onclick="changeSlide(1)" aria-label="Next slide">Next ›</button>
+    <button class="btn" id="slide-play" onclick="toggleSlideshow()">Pause ▶</button>
+  </div>
+  <label class="small" for="slideshow-files">Choose several photos to make your slideshow</label>
+  <input id="slideshow-files" type="file" accept="image/*" multiple aria-label="Choose photos for slideshow">
+  <p class="tiny small" id="slide-status">Your selected photos are previewed on this device only. They are not uploaded anywhere.</p>
+</section>
+
+<section>
+  <h2>A tiny secret, just for us 🔐</h2>
+  <p class="small">There's a little hidden message behind this pretend password door. It is a playful surprise, not real security.</p>
+  <div style="text-align:center"><button class="btn" onclick="openSecretPage()">Unlock our secret page 💌</button></div>
+</section>
+
+<section id="scrapbook-section">
+  <h2>Our little love scrapbook 📔</h2>
+  <p class="small">Make as many memory pages as you like. Add a photo, a date, a caption, a note and a tiny sticker. Your scrapbook is saved in this browser on this device when local storage is available.</p>
+  <div class="scrapbook-form">
+    <div class="scrap-grid">
+      <label class="scrap-field full">Choose a memory photo
+        <input type="file" id="scrap-photo" accept="image/*">
+      </label>
+      <label class="scrap-field">Memory title / caption
+        <input type="text" id="scrap-caption" maxlength="70" placeholder="Our first little date…">
+      </label>
+      <label class="scrap-field">Memory date
+        <input type="date" id="scrap-date">
+      </label>
+      <label class="scrap-field full">A little note to remember it
+        <textarea id="scrap-note" maxlength="500" placeholder="What made this moment special? Write a tiny note for future us…"></textarea>
+      </label>
+      <label class="scrap-field">Choose a sticker
+        <select id="scrap-sticker"><option value="💗">Pink heart 💗</option><option value="🌷">Tulip 🌷</option><option value="🧸">Teddy bear 🧸</option><option value="✨">Sparkles ✨</option><option value="💋">Kiss 💋</option><option value="🦋">Butterfly 🦋</option><option value="🎀">Bow 🎀</option><option value="🌙">Moon 🌙</option></select>
+      </label>
+      <label class="scrap-field">Page colour
+        <select id="scrap-colour"><option value="rose">Rose pink</option><option value="lavender">Lavender</option><option value="mint">Soft mint</option><option value="cream">Vanilla cream</option></select>
+      </label>
+    </div>
+    <div class="scrap-preview" id="scrap-preview"><img id="scrap-preview-image" alt="Selected scrapbook photo preview"></div>
+    <div class="scrap-actions"><button class="btn" onclick="saveScrapbookPage()">Add memory page ♡</button><button class="btn alt" onclick="resetScrapbookForm()">Clear form</button></div>
+    <p class="tiny small" id="scrapbook-status" aria-live="polite">Tip: smaller photos save more easily on a phone. Your original photos are not changed.</p>
+  </div>
+  <div class="scrap-count" id="scrap-count">0 memory pages</div>
+  <div class="scrap-pages" id="scrap-pages"><div class="scrap-empty">Your scrapbook is waiting for its first memory. Add a photo and make page one. 🌸</div></div>
+  <div class="scrap-tools"><button class="btn alt" onclick="exportScrapbook()">Save a scrapbook backup</button><button class="btn alt" onclick="document.getElementById('scrap-import').click()">Import backup</button><input id="scrap-import" type="file" accept="application/json,.json" hidden></div>
+  <p class="scrap-note-small">Saved on this browser/device only. Browser storage can be cleared by device settings, so use “Save a scrapbook backup” now and then. Photo capacity depends on your browser; if it fills up, remove a few pages or use smaller photos.</p>
+</section>
+
+<section>
+  <div class="final-teaser">
+    <div class="infinity">♡ ∞ ♡</div>
+    <h2>One more little promise…</h2>
+    <p class="small">This is not the end of our story. It is only the beginning of all the pages we have yet to write.</p>
+    <button class="btn" onclick="openForeverScreen()">Open our final chapter ✨</button>
+  </div>
+</section>
+
+<div class="secret-overlay" id="secret-overlay" role="dialog" aria-modal="true" aria-labelledby="secret-title">
+  <div class="secret-panel">
+    <button class="btn alt" style="float:right;padding:7px 12px;margin:0" onclick="closeSecretPage()" aria-label="Close secret page">✕</button>
+    <div class="secret-lock">🔐</div>
+    <h2 id="secret-title">A little password door</h2>
+    <p class="small">Enter the date our story began, in DDMMYY format.</p>
+    <input id="secret-code" type="password" inputmode="numeric" maxlength="6" autocomplete="off" placeholder="••••••" aria-label="Six digit playful password">
+    <p class="secret-hint">Hint: 12 November 2025 · six little numbers ♡</p>
+    <div><button class="btn" onclick="checkSecretCode()">Unlock 💗</button></div>
+    <div class="secret-error" id="secret-error" aria-live="polite"></div>
+    <div class="secret-reveal" id="secret-reveal">You are my favourite notification, my safest smile, and my sweetest plot twist. No password could ever hide how much you mean to me. 💗<br><br><strong>Always yours, Afreen ♡</strong></div>
+  </div>
+</div>
+
+<div class="final-overlay" id="final-overlay" role="dialog" aria-modal="true" aria-label="Forever and Always anniversary ending">
+  <div class="final-content">
+    <button class="btn alt final-close" onclick="closeForeverScreen()">Close ✕</button>
+    <div class="final-sparkles">✦ · ✧ · ✦ · ✧ · ✦</div>
+    <h2>Forever &amp; Always</h2>
+    <div class="final-names">Afreen <span style="color:#ffb6d5">♡</span> Pritam</div>
+    <p>From 12 November 2025, and through every tomorrow still waiting for us — may we keep choosing love, laughter, kindness and each other.</p>
+    <div style="font-size:3rem;margin:12px 0">💗</div>
+    <p><strong>One story. Two hearts. Infinite chapters.</strong><br>With all my love, Afreen.</p>
+    <button class="btn" onclick="closeForeverScreen()">Back to our memories ♡</button>
+  </div>
+</div>
+
+<footer><div style="font-size:1.7rem">♡ ∞ ♡</div>Made with love by Afreen, for Pritam.<br><strong>12.11.2025 — and every chapter after.</strong><p class="tiny">Love is in the little moments, too. 🌙</p></footer>
+</main>
+<script>
+function enterSite(){document.getElementById('opening').classList.add('hide');for(let i=0;i<22;i++)setTimeout(spawnHeart,i*100)}
+function toggleLetter(){document.getElementById('letter').classList.toggle('show')}
+function openGift(){const gift=document.querySelector('.gift');gift.classList.remove('opened');void gift.offsetWidth;gift.classList.add('opened');document.getElementById('surprise').classList.add('show');for(let i=0;i<28;i++)setTimeout(spawnHeart,i*70)}
+function foreverYes(){const el=document.getElementById('forever-result');el.innerHTML='You just made Afreen smile so big! 🥹💗<br><strong>One year down, many beautiful chapters to go.</strong><br>Sending you the biggest virtual hug, Pritam. ♡';el.classList.add('show');confettiHearts()}
+function foreverMaybe(){const el=document.getElementById('forever-result');el.innerHTML='A hug first? Always. 🫂💗<br><strong>Consider yourself wrapped in the biggest Afreen hug.</strong><br>Now… one more chapter together? ♡';el.classList.add('show');confettiHearts()}
+function confettiHearts(){for(let i=0;i<25;i++)setTimeout(spawnHeart,i*80)}
+function loadPhoto(event,index){const card=document.querySelectorAll('.memory')[index],img=card.querySelector('img'),placeholder=card.querySelector('.placeholder');if(event.target.files&&event.target.files[0]){img.src=URL.createObjectURL(event.target.files[0]);img.style.display='block';placeholder.style.display='none'}}
+const target=new Date('2026-11-12T00:00:00');
+function updateCountdown(){const diff=target-new Date(),el=document.getElementById('countdown'),note=document.getElementById('countdown-note');if(diff<=0){el.innerHTML='';note.textContent='Happy 1st Anniversary, Afreen & Pritam! Today is your special day. 💗';return}const days=Math.floor(diff/86400000),hours=Math.floor(diff%86400000/3600000),mins=Math.floor(diff%3600000/60000),secs=Math.floor(diff%60000/1000);el.innerHTML=`<div class="timebox"><strong>${days}</strong><span>days</span></div><div class="timebox"><strong>${hours}</strong><span>hours</span></div><div class="timebox"><strong>${mins}</strong><span>minutes</span></div><div class="timebox"><strong>${secs}</strong><span>seconds</span></div>`;note.textContent='Counting down to another beautiful milestone together ♡'}
+setInterval(updateCountdown,1000);updateCountdown();
+document.getElementById('music-file').addEventListener('change',function(e){if(e.target.files[0]){const audio=document.getElementById('audio');audio.src=URL.createObjectURL(e.target.files[0]);audio.hidden=false;audio.load()}});
+
+function quizAnswer(correct){
+ const el=document.getElementById('quiz-result');
+ el.innerHTML=correct?'Correct, Pritam! 🥹💗 Our story began on 12 November 2025. One year of us, and so many memories ahead.':'Almost! 💕 Our special date is 12 November 2025. Remember it, my love! ♡';
+ el.classList.add('show'); if(correct){for(let i=0;i<12;i++)setTimeout(spawnHeart,i*80)}
+}
+function sendHug(){
+ const amount=document.getElementById('love-meter').value;
+ const el=document.getElementById('hug-result');
+ el.innerHTML='Hug delivered! 🫂💗<br><strong>'+amount+'% hug power</strong> from Pritam to Afreen.<br>Imagine the warmest, squishiest hug right now. ♡';
+ el.classList.add('show'); for(let i=0;i<14;i++)setTimeout(spawnHeart,i*70)
+}
+
+function spawnHeart(){const h=document.createElement('span');h.textContent=['♡','💗','✨','🌸','💕'][Math.floor(Math.random()*5)];h.className='floaty';h.style.left=Math.random()*100+'%';h.style.animationDuration=(5+Math.random()*6)+'s';h.style.fontSize=(15+Math.random()*20)+'px';document.getElementById('floaties').appendChild(h);setTimeout(()=>h.remove(),12000)}
+for(let i=0;i<18;i++)setTimeout(spawnHeart,i*350);setInterval(spawnHeart,900);
+</script>
+
+<script>
+/* New interactive features */
+function sendVirtualKiss(){
+  const stage=document.getElementById('kiss-stage');
+  const message=document.getElementById('kiss-message');
+  const old=stage.querySelector('.flying-kiss'); if(old) old.remove();
+  const kiss=document.createElement('span'); kiss.className='flying-kiss'; kiss.textContent='💋'; kiss.setAttribute('aria-hidden','true'); stage.appendChild(kiss);
+  message.textContent='One soft kiss travelling straight to Pritam… 💗';
+  setTimeout(()=>{message.textContent='Kiss delivered! Catch it, Pritam. — Afreen ♡'; for(let i=0;i<12;i++)setTimeout(spawnHeart,i*65); kiss.remove()},1650);
+}
+
+// Draw random stars plus the couple's names as points of light on a responsive canvas.
+function drawStarNames(){
+  const canvas=document.getElementById('star-canvas'); if(!canvas) return;
+  const rect=canvas.getBoundingClientRect(); if(!rect.width) return;
+  const dpr=Math.min(window.devicePixelRatio||1,2), w=rect.width, h=rect.height;
+  canvas.width=Math.round(w*dpr); canvas.height=Math.round(h*dpr);
+  const ctx=canvas.getContext('2d'); ctx.setTransform(dpr,0,0,dpr,0,0); ctx.clearRect(0,0,w,h);
+  // A calm field of scattered stars.
+  for(let i=0;i<115;i++){
+    const x=Math.random()*w,y=Math.random()*h,r=Math.random()*1.5+.35,a=.3+Math.random()*.65;
+    ctx.globalAlpha=a; ctx.fillStyle='#fff5ff'; ctx.beginPath(); ctx.arc(x,y,r,0,Math.PI*2); ctx.fill();
+    if(i%17===0){ctx.globalAlpha=.75;ctx.strokeStyle='#f9c9e7';ctx.lineWidth=.7;ctx.beginPath();ctx.moveTo(x-4,y);ctx.lineTo(x+4,y);ctx.moveTo(x,y-4);ctx.lineTo(x,y+4);ctx.stroke()}
+  }
+  const off=document.createElement('canvas'); off.width=Math.ceil(w); off.height=Math.ceil(h);
+  const m=off.getContext('2d');
+  let fontSize=Math.min(30,Math.max(17,w/12));
+  m.textAlign='center';m.textBaseline='middle';
+  const phrase='AFREEN  ♡  PRITAM';
+  do{m.font=`bold ${fontSize}px Georgia, serif`;if(m.measureText(phrase).width<=w-20)break;fontSize-=1}while(fontSize>12);
+  m.fillStyle='#fff';m.fillText(phrase,w/2,h*.49);
+  const data=m.getImageData(0,0,off.width,off.height).data;
+  const points=[];const step=w<430?2:3;
+  for(let y=0;y<h;y+=step){for(let x=0;x<w;x+=step){const idx=(Math.floor(y)*off.width+Math.floor(x))*4;if(data[idx+3]>80)points.push({x,y})}}
+  // A few constellation lines behind the star-letters.
+  ctx.globalAlpha=.3;ctx.strokeStyle='#bdc8ff';ctx.lineWidth=.7;
+  for(let i=0;i<points.length-1;i+=Math.max(2,Math.floor(points.length/38))){const p=points[i],q=points[Math.min(points.length-1,i+3)];ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(q.x,q.y);ctx.stroke()}
+  points.forEach((p,i)=>{const r=i%7===0?2.1:1.2;ctx.globalAlpha=.72+(i%3)*.09;ctx.fillStyle=i%5===0?'#ffd6ec':'#fff';ctx.shadowColor='#ffc1e5';ctx.shadowBlur=i%7===0?11:5;ctx.beginPath();ctx.arc(p.x,p.y,r,0,Math.PI*2);ctx.fill();if(i%13===0){ctx.lineWidth=.8;ctx.strokeStyle='#fff';ctx.beginPath();ctx.moveTo(p.x-4,p.y);ctx.lineTo(p.x+4,p.y);ctx.moveTo(p.x,p.y-4);ctx.lineTo(p.x,p.y+4);ctx.stroke()}});
+  ctx.shadowBlur=0;ctx.globalAlpha=1;
+  // Little heart constellation below the names.
+  const cx=w/2,cy=h*.72;ctx.fillStyle='#ffc4e1';ctx.shadowColor='#ffadd8';ctx.shadowBlur=13;ctx.font='20px Georgia';ctx.textAlign='center';ctx.fillText('♡',cx,cy);
+}
+window.addEventListener('resize',()=>{clearTimeout(window._starResize);window._starResize=setTimeout(drawStarNames,140)});
+setTimeout(drawStarNames,100);
+
+// Cinematic slideshow: images are selected locally and held in memory for this visit.
+let slideDeck=[
+  {url:'',caption:'Every love story has a favourite scene…'},
+  {url:'',caption:'Ours is still being written. ♡'},
+  {url:'',caption:'Afreen ♡ Pritam — one beautiful beginning'}
+];
+let slideIndex=0, slideshowPlaying=true, slideTimer=null, slideObjectUrls=[];
+function renderSlide(){
+  const item=slideDeck[slideIndex]||slideDeck[0],img=document.getElementById('slideshow-image'),placeholder=document.getElementById('slide-placeholder');
+  document.getElementById('slide-caption').textContent=item.caption;
+  document.getElementById('slide-count').textContent=(slideIndex+1)+' / '+slideDeck.length;
+  if(item.url){img.src=item.url;img.style.display='block';requestAnimationFrame(()=>img.classList.add('visible'));placeholder.style.display='none'}
+  else{img.classList.remove('visible');img.style.display='none';img.removeAttribute('src');placeholder.style.display='grid';placeholder.textContent=item.caption}
+}
+function changeSlide(step){slideIndex=(slideIndex+step+slideDeck.length)%slideDeck.length;renderSlide()}
+function stopSlideTimer(){if(slideTimer){clearInterval(slideTimer);slideTimer=null}}
+function startSlideTimer(){stopSlideTimer();if(slideshowPlaying&&slideDeck.length>1)slideTimer=setInterval(()=>changeSlide(1),4200)}
+function toggleSlideshow(){slideshowPlaying=!slideshowPlaying;document.getElementById('slide-play').textContent=slideshowPlaying?'Pause ▶':'Play ▷';if(slideshowPlaying)startSlideTimer();else stopSlideTimer()}
+document.getElementById('slideshow-files').addEventListener('change',function(e){
+  const files=Array.from(e.target.files||[]).filter(f=>f.type.startsWith('image/'));
+  if(!files.length)return;
+  slideObjectUrls.forEach(URL.revokeObjectURL);slideObjectUrls=[];
+  slideDeck=files.map((file,i)=>{const url=URL.createObjectURL(file);slideObjectUrls.push(url);return{url,caption:file.name.replace(/\.[^.]+$/,'').replace(/[_-]+/g,' ')||`Our memory ${i+1}`}});
+  slideIndex=0;renderSlide();startSlideTimer();
+  document.getElementById('slide-status').textContent=files.length+' photo'+(files.length===1?'':'s')+' added to the slideshow preview. They stay on this device for this visit.';
+});
+renderSlide();startSlideTimer();
+
+// The lock is deliberately playful: this is not an authentication or privacy feature.
+function openSecretPage(){const overlay=document.getElementById('secret-overlay');overlay.classList.add('show');document.getElementById('secret-code').value='';document.getElementById('secret-error').textContent='';document.getElementById('secret-reveal').classList.remove('show');setTimeout(()=>document.getElementById('secret-code').focus(),80)}
+function closeSecretPage(){document.getElementById('secret-overlay').classList.remove('show')}
+function checkSecretCode(){
+  const value=document.getElementById('secret-code').value.trim();const error=document.getElementById('secret-error');
+  if(value==='121125'){document.getElementById('secret-reveal').classList.add('show');error.textContent='The little door is open. 💗';confettiHearts()}
+  else{error.textContent='Not quite, my love. Think of our special date: DDMMYY. ♡'}
+}
+document.getElementById('secret-code').addEventListener('keydown',e=>{if(e.key==='Enter')checkSecretCode()});
+document.getElementById('secret-overlay').addEventListener('click',e=>{if(e.target.id==='secret-overlay')closeSecretPage()});
+
+function openForeverScreen(){document.getElementById('final-overlay').classList.add('show');document.body.style.overflow='hidden';confettiHearts()}
+function closeForeverScreen(){document.getElementById('final-overlay').classList.remove('show');document.body.style.overflow=''}
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeSecretPage();closeForeverScreen()}});
+
+// Interactive multi-page scrapbook. Small photos are compressed before saving to localStorage.
+const SCRAPBOOK_KEY='afreenPritamScrapbookV1';
+let scrapbookEntries=[];let scrapbookPreviewUrl=null;let scrapbookPreviewData='';
+function getLocalDay(){const d=new Date();return [d.getFullYear(),String(d.getMonth()+1).padStart(2,'0'),String(d.getDate()).padStart(2,'0')].join('-')}
+document.getElementById('scrap-date').value=getLocalDay();
+function readScrapbook(){try{const raw=localStorage.getItem(SCRAPBOOK_KEY);const parsed=raw?JSON.parse(raw):[];return Array.isArray(parsed)?parsed:[]}catch(err){setScrapStatus('This browser could not read saved scrapbook pages. You can still add pages during this visit.','error');return []}}
+function persistScrapbook(entries){try{localStorage.setItem(SCRAPBOOK_KEY,JSON.stringify(entries));return true}catch(err){setScrapStatus('Browser storage is full or unavailable. Remove a few older pages, use a smaller image, or save a backup.','error');return false}}
+function setScrapStatus(message,type){const el=document.getElementById('scrapbook-status');el.textContent=message;el.style.color=type==='error'?'#b33b66':'#9c7187'}
+function compressScrapPhoto(file){return new Promise((resolve,reject)=>{
+  const reader=new FileReader();reader.onerror=()=>reject(new Error('Could not read that photo.'));
+  reader.onload=()=>{const img=new Image();img.onerror=()=>reject(new Error('That image could not be opened.'));img.onload=()=>{
+    const maxSide=860,scale=Math.min(1,maxSide/Math.max(img.width,img.height));const canvas=document.createElement('canvas');canvas.width=Math.max(1,Math.round(img.width*scale));canvas.height=Math.max(1,Math.round(img.height*scale));
+    const ctx=canvas.getContext('2d');ctx.fillStyle='#fff';ctx.fillRect(0,0,canvas.width,canvas.height);ctx.drawImage(img,0,0,canvas.width,canvas.height);
+    let quality=.68,data=canvas.toDataURL('image/jpeg',quality);
+    while(data.length>480000&&quality>.38){quality-=.08;data=canvas.toDataURL('image/jpeg',quality)}
+    if(data.length>850000){const smaller=document.createElement('canvas');smaller.width=Math.round(canvas.width*.72);smaller.height=Math.round(canvas.height*.72);smaller.getContext('2d').drawImage(canvas,0,0,smaller.width,smaller.height);data=smaller.toDataURL('image/jpeg',.48)}
+    resolve(data);
+  };img.src=reader.result};reader.readAsDataURL(file);
+})}
+document.getElementById('scrap-photo').addEventListener('change',async function(e){
+  const file=e.target.files&&e.target.files[0];if(!file)return;
+  if(!file.type.startsWith('image/')){setScrapStatus('Please choose an image file.','error');return}
+  try{
+    if(scrapbookPreviewUrl)URL.revokeObjectURL(scrapbookPreviewUrl);
+    scrapbookPreviewUrl=URL.createObjectURL(file);const preview=document.getElementById('scrap-preview');
+    document.getElementById('scrap-preview-image').src=scrapbookPreviewUrl;preview.classList.add('visible');
+    scrapbookPreviewData=await compressScrapPhoto(file);setScrapStatus('Photo ready. It will be saved in a smaller format to help your phone store it.');
+  }catch(err){scrapbookPreviewData='';setScrapStatus(err.message||'Could not prepare this photo.','error')}
+});
+function saveScrapbookPage(){
+  const caption=document.getElementById('scrap-caption').value.trim();const date=document.getElementById('scrap-date').value;const note=document.getElementById('scrap-note').value.trim();
+  if(!caption&&!note&&!scrapbookPreviewData){setScrapStatus('Add at least a photo, a caption or a little note first.','error');return}
+  const entry={id:String(Date.now())+'_'+Math.random().toString(36).slice(2,7),caption:caption||'A little moment of us',date:date||getLocalDay(),note,sticker:document.getElementById('scrap-sticker').value,colour:document.getElementById('scrap-colour').value,image:scrapbookPreviewData,createdAt:new Date().toISOString()};
+  const updated=[...scrapbookEntries,entry];if(!persistScrapbook(updated))return;
+  scrapbookEntries=updated;renderScrapbook();resetScrapbookForm();setScrapStatus('Memory page added and saved on this browser. Keep making little memories. 💗');
+}
+function resetScrapbookForm(){
+  document.getElementById('scrap-caption').value='';document.getElementById('scrap-note').value='';document.getElementById('scrap-date').value=getLocalDay();document.getElementById('scrap-photo').value='';
+  document.getElementById('scrap-preview').classList.remove('visible');document.getElementById('scrap-preview-image').removeAttribute('src');scrapbookPreviewData='';if(scrapbookPreviewUrl){URL.revokeObjectURL(scrapbookPreviewUrl);scrapbookPreviewUrl=null}
+}
+function renderScrapbook(){
+  const root=document.getElementById('scrap-pages');root.replaceChildren();document.getElementById('scrap-count').textContent=scrapbookEntries.length+' memory page'+(scrapbookEntries.length===1?'':'s');
+  if(!scrapbookEntries.length){const empty=document.createElement('div');empty.className='scrap-empty';empty.textContent='Your scrapbook is waiting for its first memory. Add a photo and make page one. 🌸';root.appendChild(empty);return}
+  scrapbookEntries.forEach((entry,index)=>{
+    const card=document.createElement('article');card.className='scrap-page';card.style.setProperty('--tilt',index%2?' -1.2deg':'1deg');
+    const sticker=document.createElement('span');sticker.className='scrap-sticker';sticker.textContent=entry.sticker||'💗';card.appendChild(sticker);
+    if(entry.image){const img=document.createElement('img');img.className='scrap-photo';img.src=entry.image;img.alt=entry.caption||'Scrapbook memory';card.appendChild(img)}else{const no=document.createElement('div');no.className='scrap-no-photo';no.textContent='♡';card.appendChild(no)}
+    const title=document.createElement('h3');title.textContent=entry.caption||'A little moment of us';card.appendChild(title);
+    const date=document.createElement('div');date.className='scrap-date';date.textContent=entry.date?new Date(entry.date+'T12:00:00').toLocaleDateString(undefined,{day:'numeric',month:'long',year:'numeric'}):'';card.appendChild(date);
+    if(entry.note){const note=document.createElement('p');note.className='scrap-note';note.textContent=entry.note;card.appendChild(note)}
+    const del=document.createElement('button');del.className='scrap-remove';del.type='button';del.textContent='Remove this page';del.addEventListener('click',()=>removeScrapbookPage(entry.id));card.appendChild(del);
+    const tones={rose:'#fff2f6',lavender:'#f5f0ff',mint:'#effaf5',cream:'#fffaf0'};card.style.background=tones[entry.colour]||'#fffdf8';root.appendChild(card);
+  });
+}
+function removeScrapbookPage(id){if(!confirm('Remove this memory page from this device?'))return;const updated=scrapbookEntries.filter(x=>x.id!==id);if(persistScrapbook(updated)){scrapbookEntries=updated;renderScrapbook();setScrapStatus('Memory page removed.')}}
+function exportScrapbook(){
+  const blob=new Blob([JSON.stringify({app:'Afreen & Pritam scrapbook',version:1,exportedAt:new Date().toISOString(),entries:scrapbookEntries},null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='afreen-pritam-scrapbook-backup.json';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);setScrapStatus('Scrapbook backup prepared. Keep the JSON file somewhere safe.');
+}
+document.getElementById('scrap-import').addEventListener('change',async function(e){
+  const file=e.target.files&&e.target.files[0];if(!file)return;
+  try{const parsed=JSON.parse(await file.text());const items=Array.isArray(parsed)?parsed:parsed.entries;if(!Array.isArray(items))throw new Error('This file does not look like a scrapbook backup.');
+    const cleaned=items.filter(x=>x&&typeof x==='object').slice(0,100).map((x,i)=>({id:String(x.id||Date.now()+'_'+i),caption:String(x.caption||'A little moment of us').slice(0,70),date:String(x.date||getLocalDay()),note:String(x.note||'').slice(0,500),sticker:String(x.sticker||'💗'),colour:['rose','lavender','mint','cream'].includes(x.colour)?x.colour:'rose',image:typeof x.image==='string'&&x.image.startsWith('data:image/')?x.image:'',createdAt:x.createdAt||new Date().toISOString()}));
+    const merged=[...scrapbookEntries,...cleaned];if(!persistScrapbook(merged))return;scrapbookEntries=merged;renderScrapbook();setScrapStatus('Backup imported. Your memory pages are back. 💗');
+  }catch(err){setScrapStatus(err.message||'Could not import that backup.','error')}finally{e.target.value=''}
+});
+scrapbookEntries=readScrapbook();renderScrapbook();
+</script>
+
+</body>
+</html>
